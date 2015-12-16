@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="BookApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Шаг 4 / Фреймворк AngularJS / Нетология</title>
+  <script src="../libs/angular-1.4.8/angular.min.js"></script>
+</head>
+
+<body ng-controller="BookListCtrl">
+
+  Найти:
+  <input ng-model="query"><br><br>
+
+  Сортировать по:
+  <select ng-model="orderProperty">
+    <option value="price">Цене</option>
+    <option value="pages">Количеству страниц</option>
+  </select>
+
+  <ul>
+    <li ng-repeat="book in books | filter:query | orderBy:orderProperty">
+      <h3>{{book.name | uppercase}}</h3>
+      <p>{{book.author}}</p>
+      <p>Страниц: {{book.pages}}, цена: {{book.price}}</p>
+    </li>
+  </ul>
+
+  <p ng-show="query">
+    Выведены книги, содержащие {{query}}
+  </p>
+
+  <script src="js/step3/app.js"></script>
+  <script src="js/step3/controllers.js"></script>
+
+</body>
+
+</html>
