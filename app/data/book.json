@@ -1,9 +1,9 @@
 {
-  "id": "978-0641723445",
-  "name": "The Lightning Thief",
-  "author": "Rick Riordan",
-  "genre": "fantasy",
-  "inStock": true,
-  "price": 12.50,
-  "pages": 34
+    "id": "978-0641723445",
+    "name": "The Lightning Thief",
+    "author": "Rick Riordan",
+    "genre": "fantasy",
+    "inStock": true,
+    "price": 12.50,
+    "pages": 34
 }

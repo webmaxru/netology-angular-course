@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html ng-app="BookApp">
 
-<head>
-  <meta charset="utf-8">
-  <title>Шаг 5 / Фреймворк AngularJS / Нетология</title>
-  <script src="../libs/angular-1.4.8/angular.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <title>Шаг 5 / Фреймворк AngularJS / Нетология</title>
+        <script src="../libs/angular-1.5.3/angular.min.js"></script>
 
-  <style>
-    .ng-dirty.ng-invalid {
-      border-color: #FA787E;
-    }
+        <style>
+            .ng-dirty.ng-invalid {
+                border-color: #FA787E;
+            }
 
-    .ng-dirty.ng-valid {
-      border-color: #78FA89;
-    }
-  </style>
-</head>
+            .ng-dirty.ng-valid {
+                border-color: #78FA89;
+            }
 
-<body ng-controller="BookDetailCtrl">
+        </style>
+    </head>
 
-  <form name="bookForm" novalidate>
+    <body ng-controller="BookDetailCtrl">
 
-    <input ng-model="book.name" type="text" placeholder="Название" required />
-    <input ng-model="book.author" type="text" placeholder="Автор" />
+        <form name="bookForm" novalidate>
 
-    <input type="submit" value="Добавить" ng-click="addBook(book)" ng-disabled="bookForm.$invalid" />
+            <input ng-model="book.name" type="text" placeholder="Название" required/>
+            <input ng-model="book.author" type="text" placeholder="Автор"/>
 
-  </form>
+            <input type="submit" value="Добавить" ng-click="addBook(book)" ng-disabled="bookForm.$invalid"/>
 
-  <script src="js/step5/app.js"></script>
-  <script src="js/step5/controllers.js"></script>
+        </form>
 
-</body>
+        <script src="js/step5/app.js"></script>
+        <script src="js/step5/controllers.js"></script>
+
+    </body>
 
 </html>

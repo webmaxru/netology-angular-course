@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Шаг 1 / Фреймворк AngularJS / Нетология</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Шаг 1 / Фреймворк AngularJS / Нетология</title>
+    </head>
 
-<body>
+    <body>
 
+        <input id="myCheckbox" type="checkbox">
 
-  <input id="myCheckbox" type="checkbox">
+        <h1 id="myText">
+            Hello, world!
+        </h1>
 
-  <h1 id="myText">
-    Hello, world!
-  </h1>
+        <script src="../libs/jquery/jquery.min.js"></script>
 
+        <script>
+            $(document).ready(function() {
 
-  <script src="../libs/jquery/jquery.min.js"></script>
+                function toggleMyText() {
 
-  <script>
-    $(document).ready(function() {
+                    if ($('#myCheckbox').is(':checked')) {
+                        $('#myText').show();
+                    } else {
+                        $('#myText').hide();
+                    }
+                };
 
-      function toggleMyText() {
+                $('#myCheckbox').change(function() {
+                    toggleMyText();
+                });
 
-        if ($('#myCheckbox').is(':checked')) {
-          $('#myText').show();
-        } else {
-          $('#myText').hide();
-        }
-      };
+                toggleMyText();
 
-      $('#myCheckbox').change(function() {
-        toggleMyText();
-      });
+            });
+        </script>
 
-      toggleMyText();
-
-    });
-  </script>
-
-</body>
+    </body>
 
 </html>
