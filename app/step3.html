@@ -10,9 +10,9 @@
     <body ng-controller="BookListCtrl">
 
         <ul>
-            <li ng-repeat="book in books">
-                <h1>{{book.name + ' - ' + book.genre }}</h1>
-                <p>{{book.author}}</p>
+            <li ng-repeat="singleBook in books">
+                <h1>{{singleBook.name + ' - ' + singleBook.genre }}</h1>
+                <p>{{singleBook.author}}</p>
             </li>
         </ul>
 

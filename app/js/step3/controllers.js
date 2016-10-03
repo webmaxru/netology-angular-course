@@ -36,6 +36,6 @@ bookApp.controller('BookListCtrl', function($scope) {
         "pages": 475
     }];
 
-    $scope.orderProperty = 'price';
+    $scope.myOrderProperty = 'price';
 
 });
