@@ -1,1 +1,1 @@
-var bookApp = angular.module('BookApp', []);
+var bookApp = angular.module('BookApp', ["ngResource"]);

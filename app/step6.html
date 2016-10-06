@@ -5,9 +5,10 @@
         <meta charset="utf-8">
         <title>Шаг 6 / Фреймворк AngularJS / Нетология</title>
         <script src="../libs/angular-1.5.3/angular.js"></script>
+        <script src="../libs/angular-1.5.3/angular-resource.min.js"></script>
     </head>
 
-    <body ng-controller="BookListCtrl">
+    <body ng-controller="BookListCtrl as books">
 
         Найти:
         <input ng-model="query"><br><br>
@@ -16,15 +17,17 @@
         <select ng-model="orderProperty">
             <option value="price">Цене</option>
             <option value="pages">Количеству страниц</option>
+            <option value="genre">Жанру</option>
+            <option value="name">Названию</option>
         </select>
 
         <ul>
-            <li ng-repeat="book in books | filter:query | orderBy:orderProperty">
-                <h3>{{book.name | uppercase}}</h3>
+            <li ng-repeat="book in books.list | filter:query | orderBy:orderProperty">
+                <h3>{{book.name | uppercase}} ({{book.genre}})</h3>                
                 <p>{{book.author}}</p>
                 <p>Страниц:
                     {{book.pages}}, цена:
-                    {{book.price}}</p>
+                    {{book.price | currency}}</p>
             </li>
         </ul>
 
@@ -34,6 +37,7 @@
         </p>
 
         <script src="js/step6/app.js"></script>
+        <script src="js/step6/factory.js"></script>
         <script src="js/step6/controllers.js"></script>
 
     </body>
